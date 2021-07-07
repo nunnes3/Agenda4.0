@@ -200,7 +200,7 @@ namespace eAgenda.Controladores.CompromissoModule
                 if (resultadoValidacao == "ESTA_VALIDO")
                 {
                     registro.Id = id;
-                    Db.Update(sqlInserirCompromisso, ObtemParametrosCompromisso(registro));
+                    Db.Update(sqlEditarCompromisso, ObtemParametrosCompromisso(registro));
                     return resultadoValidacao;
                 }
             }

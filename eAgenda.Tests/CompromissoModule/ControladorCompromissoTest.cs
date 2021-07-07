@@ -216,9 +216,10 @@ namespace eAgenda.Tests.CompromissoModule
             controladorCompromisso.InserirNovo(compromisso);
 
             var compromissoDois = new Compromisso("compromisso dois", "teste compromisso dois", "visual studio",
-                              new DateTime(2022, 12, 13), new TimeSpan(3, 00, 00), new TimeSpan(4, 00, 00), contatoDois);
+                              new DateTime(2022, 12, 13), new TimeSpan(8, 00, 00), new TimeSpan(9, 00, 00), contatoDois);
 
             controladorCompromisso.Editar(compromisso.Id, compromissoDois);
+           
 
             var compromissoEncotrado = controladorCompromisso.SelecionarPorId(compromisso.Id);
             compromissoEncotrado.Should().Be(compromissoDois);
