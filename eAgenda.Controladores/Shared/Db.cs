@@ -203,7 +203,7 @@ namespace eAgenda.Controladores.Shared
 
         public static bool Exists(string sql, Dictionary<string, object> parameters)
         {
-            if (bancoEscolhido == "dbsqlsever")
+            if (bancoEscolhido == "dbsqlserver")
             {
 
                 SqlConnection connection = new SqlConnection(connectionString);
@@ -275,7 +275,7 @@ namespace eAgenda.Controladores.Shared
 
         private static string AppendSelectIdentityOrRowid(this string sql)
         {
-            if(bancoEscolhido == "dbsqlsever")
+            if(bancoEscolhido == "dbsqlserver")
             {
                 return sql + ";SELECT SCOPE_IDENTITY()";
             }
